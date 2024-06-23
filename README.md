@@ -19,3 +19,7 @@
 ![Capture](https://user-images.githubusercontent.com/81551926/181006732-8291e44a-c962-4458-a18f-30fa323004cd.JPG)
 
 ![1](https://user-images.githubusercontent.com/81551926/181007758-da768a82-a0a3-4b0c-bf3c-b5b350986114.JPG)
+
+![4](https://user-images.githubusercontent.com/81551926/181008194-4d8fb600-9e94-4ec3-9767-8f46c928cb85.JPG)
+
+![footer](https://user-images.githubusercontent.com/81551926/181007571-44a13a8d-d4f5-4bd8-be49-cbf62d542d8d.JPG)
