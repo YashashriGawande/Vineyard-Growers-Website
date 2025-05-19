@@ -1,0 +1,81 @@
+ANSIBLE
+
+
+mkdir demo
+cd demo
+
+nano inventory.ini
+[webservers]
+managed_node ansible_host = client ip  ansible_user=star
+
+saved
+
+
+nano install_a2.yml
+
+----------------------------------
+- ymlfile.txt
+-------------------------------------------
+
+
+---
+- name: Install apache2 on Debian
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: Update apt cache
+      ansible.builtin.apt:
+        update_cache: yes
+
+    - name: Install apache2
+      ansible.builtin.apt:
+        name: apache2
+        state: present
+
+    - name: Ensure apache2 is running
+      ansible.builtin.service:
+        name: apache2
+        state: started
+        enabled: yes
+
+	  
+save the file
+
+----------------------
+
+sudo nano /etc/default/locale
+
+LANG="en.UTF-8"
+LC_ALL=" en_IN.UTF-8"
+
+
+--------------------
+
+sudo locale-gen en_In.UTF-8
+
+sudo update-locale
+sudo reboot
+
+
+
+NOW DO DUPLICATE SESSION 
+
+cd demo --->    
+ansible -i inventory.ini -m ping all
+sudo ansible-playbook -i inventory.ini install_a2.yml
+
+
+now go in client
+sudo nano /etc/sudoers
+no passwd
+save
+
+ansible-playbook -i inventory.ini install_a2.yml     ----- run it again
+
+Go on brower and check with ip
+
+
+------------------------------
+
+
+
